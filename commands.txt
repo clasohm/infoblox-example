@@ -1,0 +1,5 @@
+curl -v -k -u USER:PASSWORD -X POST -H "Content-Type: application/json" -d @add-host.json 'https://grid.example.com/wapi/v1.7.1/record:host?_return_fields=ipv4addrs'
+
+curl -k -X GET -u USER:PASSWORD 'https://grid.example.com/wapi/v1.7.1/record:host?name=test060101.xtonet.com&view=Internal'
+
+ansible-playbook -v --vault-password-file=vault-password.txt infoblox-add-host.yml

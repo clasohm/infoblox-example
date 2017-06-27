@@ -1,0 +1,10 @@
+{
+  "ipv4addrs": [
+    {
+      "ipv4addr": "func:nextavailableip:10.24.10.0/24"
+    }
+  ],
+  "name": "test060101.example.com",
+  "view": "TestingView",
+  "comment": "test"
+}

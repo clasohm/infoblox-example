@@ -1,0 +1,16 @@
+---
+- name: Delete host from Infoblox
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - infoblox-vars.yml
+    - infoblox-vault.yml
+  tasks:
+    - name: Delete host
+      infoblox:
+        server: "{{ infoblox_server }}"
+        username: "{{ infoblox_username }}"
+        password: "{{ infoblox_password }}"
+        action: delete_host
+        dns_view: "{{ infoblox_dns_view }}"
+        host: "{{ infoblox_hostname }}"

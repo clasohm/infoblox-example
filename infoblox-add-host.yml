@@ -1,0 +1,17 @@
+---
+- name: Add host in Infoblox
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - infoblox-vars.yml
+    - infoblox-vault.yml
+  tasks:
+    - name: Add host
+      infoblox:
+        server: "{{ infoblox_server }}"
+        username: "{{ infoblox_username }}"
+        password: "{{ infoblox_password }}"
+        action: add_host
+        dns_view: "{{ infoblox_dns_view }}"
+        network: 10.24.10.0/24
+        host: "{{ infoblox_hostname }}"

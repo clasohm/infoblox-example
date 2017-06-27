@@ -1,0 +1,4 @@
+infoblox_server: grid.example.com
+infoblox_username: USER
+infoblox_dns_view: TestingView
+infoblox_hostname: test060101.example.com
